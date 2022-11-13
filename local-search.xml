@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/"/>
+    <url>/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="十七届智能车视觉组问题收录">十七届智能车视觉组问题收录</h3><span id="more"></span><ol><li class="lvl-3"><p>问题一</p><p>在按照基础教程配置过程中，遇到了一系列问题，主要是CUDA显卡驱动方面问题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">问题： keras-nightly 导入包报错 cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimizers&#x27;</span><br></code></pre></td></tr></table></figure><p>报错信息</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam<br>ImportError: cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimozers&#x27;</span><br></code></pre></td></tr></table></figure><p>解决方案</p><p>将错误使用代码修改：</p>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">错误代码：<br><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam<br>opt = Adam(lr=lr, decay=lr/epochs)<br>修改为：<br><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> adam_v2<br>opt = adam_v2.Adam(lr=lr, decay=lr/epochs)<br></code></pre></td></tr></table></figure></li><li class="lvl-3"><p>问题二</p></li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>智能车比赛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/11/12/hello-world/"/>
+    <url>/2022/11/12/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start">Quick Start</h2><h3 id="Create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>win10版本转换激活</title>
+    <link href="/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/"/>
+    <url>/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/</url>
+    
+    <content type="html"><![CDATA[<h1>笔记本win10版本转换以及激活</h1><p>本篇文章介绍笔记本win10版本转换以及激活方法</p><span id="more"></span><h3 id="工具准备">工具准备</h3><ul class="lvl-0"><li class="lvl-2"><p>win10版本转换工具</p><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" style="zoom:67%;" /></li><li class="lvl-2"><p>win10激活工具</p><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E6%BF%80%E6%B4%BB.png" style="zoom:50%;" /></li></ul><p>工具于点击 <a href="https://pan.baidu.com/s/1vX4xX9D7ip47HBhKUCxICA">此处下载</a></p><p>提取码：uynh</p><p>解压压缩包后得到两个文件夹，其中版本一键转换文件夹里面就是版本转换工具，另一文件夹则是激活工具。</p><h3 id="工具准备好后就可以开始进行版本转换了">工具准备好后就可以开始进行版本转换了</h3><p>本文基于联想拯救者R7000P 2020 win10家庭中文版进行演示</p><ul class="lvl-0"><li class="lvl-2"><p>打开版本一键转换软件</p></li><li class="lvl-2"><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" style="zoom:67%;" /></li><li class="lvl-2"><p>如图所示，点击可以选择转换的版本，下面选项默认即可，点击开始转换，等待转换成功即可</p></li><li class="lvl-2"><p>等待提示版本转换成功后，进入另一文件夹，再进入All-In-One-Version文件夹，右键点击 MAS_1.4_AIO_CRC32_9A7B5B05.cmd 文件，选择以管理员身份运行</p></li><li class="lvl-2"><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E6%BF%80%E6%B4%BB.png" style="zoom:50%;" /></li><li class="lvl-2"><p>运行结果如图所示，键盘输入 2 来激活win10版本，其中[2],[3],[4]是三种激活方法，默认选择方法[2]即可，输入2后等待程序运行，当出现[successful]时代表激活成功，恭喜你，win10版本转换激活成功。</p></li></ul><p>进入设置里面可任意查看版本已经转换成功，本教程结束</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>win10</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
