@@ -11,6 +11,12 @@
     <content type="html"><![CDATA[<h3 id="十七届智能车视觉组问题收录">十七届智能车视觉组问题收录</h3><span id="more"></span><ol><li class="lvl-3"><p>问题一</p><p>在按照基础教程配置过程中，遇到了一系列问题，主要是CUDA显卡驱动方面问题</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">问题： keras-nightly 导入包报错 cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimizers&#x27;</span><br></code></pre></td></tr></table></figure><p>报错信息</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam<br>ImportError: cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimozers&#x27;</span><br></code></pre></td></tr></table></figure><p>解决方案</p><p>将错误使用代码修改：</p>   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">错误代码：<br><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam<br>opt = Adam(lr=lr, decay=lr/epochs)<br>修改为：<br><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> adam_v2<br>opt = adam_v2.Adam(lr=lr, decay=lr/epochs)<br></code></pre></td></tr></table></figure></li><li class="lvl-3"><p>问题二</p></li></ol>]]></content>
     
     
+    <categories>
+      
+      <category>智能车</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -29,6 +35,12 @@
     
     <content type="html"><![CDATA[<h1>笔记本win10版本转换以及激活</h1><p>本篇文章介绍笔记本win10版本转换以及激活方法</p><span id="more"></span><h3 id="工具准备">工具准备</h3><ul class="lvl-0"><li class="lvl-2"><p>win10版本转换工具</p><p><img src="/img/mdimg/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" alt=""></p></li><li class="lvl-2"><p>win10激活工具</p><p><img src="/img/mdimg/%E6%BF%80%E6%B4%BB.png" alt=""></p></li></ul><p>解压压缩包后得到两个文件夹，其中版本一键转换文件夹里面就是版本转换工具，另一文件夹则是激活工具。</p><h3 id="工具准备好后就可以开始进行版本转换了">工具准备好后就可以开始进行版本转换了</h3><p>本文基于联想拯救者R7000P 2020 win10家庭中文版进行演示</p><ul class="lvl-0"><li class="lvl-2"><p>打开版本一键转换软件</p><p><img src="/img/mdimg/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" alt=""></p></li><li class="lvl-2"><p>如图所示，点击可以选择转换的版本，下面选项默认即可，点击开始转换，等待转换成功即可</p></li><li class="lvl-2"><p>等待提示版本转换成功后，进入另一文件夹，再进入All-In-One-Version文件夹，右键点击 MAS_1.4_AIO_CRC32_9A7B5B05.cmd 文件，选择以管理员身份运行</p></li><li class="lvl-2"><p><img src="/img/mdimg/%E6%BF%80%E6%B4%BB.png" alt=""></p></li><li class="lvl-2"><p>运行结果如图所示，键盘输入 2 来激活win10版本，其中[2],[3],[4]是三种激活方法，默认选择方法[2]即可，输入2后等待程序运行，当出现[successful]时代表激活成功，恭喜你，win10版本转换激活成功。</p></li></ul><p>进入设置里面可任意查看版本已经转换成功，本教程结束</p>]]></content>
     
+    
+    <categories>
+      
+      <category>win10</category>
+      
+    </categories>
     
     
     <tags>
