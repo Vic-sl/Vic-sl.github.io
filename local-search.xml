@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title></title>
+    <title>十七届智能车视觉组问题收录</title>
     <link href="/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/"/>
     <url>/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/</url>
     
@@ -40,7 +40,7 @@
     <link href="/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/"/>
     <url>/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/</url>
     
-    <content type="html"><![CDATA[<h1>笔记本win10版本转换以及激活</h1><p>本篇文章介绍笔记本win10版本转换以及激活方法</p><span id="more"></span><h3 id="工具准备">工具准备</h3><ul class="lvl-0"><li class="lvl-2"><p>win10版本转换工具</p><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" style="zoom:67%;" /></li><li class="lvl-2"><p>win10激活工具</p><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E6%BF%80%E6%B4%BB.png" style="zoom:50%;" /></li></ul><p>工具于点击 <a href="https://pan.baidu.com/s/1vX4xX9D7ip47HBhKUCxICA">此处下载</a></p><p>提取码：uynh</p><p>解压压缩包后得到两个文件夹，其中版本一键转换文件夹里面就是版本转换工具，另一文件夹则是激活工具。</p><h3 id="工具准备好后就可以开始进行版本转换了">工具准备好后就可以开始进行版本转换了</h3><p>本文基于联想拯救者R7000P 2020 win10家庭中文版进行演示</p><ul class="lvl-0"><li class="lvl-2"><p>打开版本一键转换软件</p></li><li class="lvl-2"><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" style="zoom:67%;" /></li><li class="lvl-2"><p>如图所示，点击可以选择转换的版本，下面选项默认即可，点击开始转换，等待转换成功即可</p></li><li class="lvl-2"><p>等待提示版本转换成功后，进入另一文件夹，再进入All-In-One-Version文件夹，右键点击 MAS_1.4_AIO_CRC32_9A7B5B05.cmd 文件，选择以管理员身份运行</p></li><li class="lvl-2"><img src="https://raw.githubusercontent.com/Vic-sl/picture-warehouse/main/img/%E6%BF%80%E6%B4%BB.png" style="zoom:50%;" /></li><li class="lvl-2"><p>运行结果如图所示，键盘输入 2 来激活win10版本，其中[2],[3],[4]是三种激活方法，默认选择方法[2]即可，输入2后等待程序运行，当出现[successful]时代表激活成功，恭喜你，win10版本转换激活成功。</p></li></ul><p>进入设置里面可任意查看版本已经转换成功，本教程结束</p>]]></content>
+    <content type="html"><![CDATA[<h1>笔记本win10版本转换以及激活</h1><p>本篇文章介绍笔记本win10版本转换以及激活方法</p><span id="more"></span><h3 id="工具准备">工具准备</h3><ul class="lvl-0"><li class="lvl-2"><p>win10版本转换工具</p><p><img src="/img/mdimg/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" alt=""></p></li><li class="lvl-2"><p>win10激活工具</p><p><img src="/img/mdimg/%E6%BF%80%E6%B4%BB.png" alt=""></p></li></ul><p>解压压缩包后得到两个文件夹，其中版本一键转换文件夹里面就是版本转换工具，另一文件夹则是激活工具。</p><h3 id="工具准备好后就可以开始进行版本转换了">工具准备好后就可以开始进行版本转换了</h3><p>本文基于联想拯救者R7000P 2020 win10家庭中文版进行演示</p><ul class="lvl-0"><li class="lvl-2"><p>打开版本一键转换软件</p><p><img src="/img/mdimg/%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2.png" alt=""></p></li><li class="lvl-2"><p>如图所示，点击可以选择转换的版本，下面选项默认即可，点击开始转换，等待转换成功即可</p></li><li class="lvl-2"><p>等待提示版本转换成功后，进入另一文件夹，再进入All-In-One-Version文件夹，右键点击 MAS_1.4_AIO_CRC32_9A7B5B05.cmd 文件，选择以管理员身份运行</p></li><li class="lvl-2"><p><img src="/img/mdimg/%E6%BF%80%E6%B4%BB.png" alt=""></p></li><li class="lvl-2"><p>运行结果如图所示，键盘输入 2 来激活win10版本，其中[2],[3],[4]是三种激活方法，默认选择方法[2]即可，输入2后等待程序运行，当出现[successful]时代表激活成功，恭喜你，win10版本转换激活成功。</p></li></ul><p>进入设置里面可任意查看版本已经转换成功，本教程结束</p>]]></content>
     
     
     
