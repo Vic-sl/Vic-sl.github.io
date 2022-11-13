@@ -83,48 +83,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="智能车识别学习问题收录"><a href="#智能车识别学习问题收录" class="headerlink" title="智能车识别学习问题收录"></a>智能车识别学习问题收录</h1><p>在按照基础教程配置过程中，遇到了一系列的问题，不过主要是版本库的更新造成代码需要更改，其中如下：</p>
-<ol>
-<li>&#96;&#96;&#96; python<br>问题： keras-nightly 导入包报错 cannot import name ‘Adam‘ from ‘keras.optimizers‘<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 报错信息</span><br><span class="line"></span><br><span class="line">&gt; ``` python</span><br><span class="line">&gt; from keras.optimizers import Adam</span><br><span class="line">&gt; ImportError: cannot import name &#x27;Adam&#x27; from &#x27;keras.optimozers&#x27;</span><br></pre></td></tr></table></figure>
-
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li><p>错误代码</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.optimizers <span class="keyword">import</span> Adam</span><br><span class="line">opt = Adam(lr=lr, decay=lr/epochs)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>修改</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.optimizers <span class="keyword">import</span> adam_v2</span><br><span class="line">opt = adam_v2.Adam(lr=lr, decay=lr/epochs)</span><br></pre></td></tr></table></figure></blockquote>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keras 库更新后无法按照原方式导入包，打开 optimizers.py 源码发现如下两句关键代码可知 Adam 导入已更改，故作如上修改</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.optimizer_v2 <span class="keyword">import</span> adam <span class="keyword">as</span> adam_v2</span><br><span class="line"><span class="string">&#x27;adam&#x27;</span>: adam_v2.Adam</span><br></pre></td></tr></table></figure>
-</blockquote>
-<ol start="2">
-<li><pre><code class="python">问题： tf 2.5.0从keras.utils导入to_categorical报错
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 报错信息</span><br><span class="line"></span><br><span class="line">&gt; ``` python</span><br><span class="line">&gt; from keras.utils import to_categorical</span><br><span class="line">&gt; ImportError: cannot import name &#x27;to_catrgorical&#x27; from &#x27;keras.utils&#x27; </span><br></pre></td></tr></table></figure>
-
-#### 解决方案
-
-&gt; <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">现在keras完全置于tf模块中，这个要从tensoflow根模块导入，修改为：</span><br></pre></td></tr></table></figure>
-&gt;
-&gt; <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.utils <span class="keyword">import</span> to_categorical</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-<li><pre><code>问题：
-</code></pre>
-</li>
-</ol>
-
+        <h1 id="智能车识别学习问题收录"><a class="markdownIt-Anchor" href="#智能车识别学习问题收录"></a> 智能车识别学习问题收录</h1>
+        
+          <p class="article-more-link">
+            <a href="/2022/11/13/%E6%99%BA%E8%83%BD%E8%BD%A6%E8%AF%86%E5%88%AB%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/11/13/%E6%99%BA%E8%83%BD%E8%BD%A6%E8%AF%86%E5%88%AB%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/" data-id="claev8now00031swa8bgz6f2h" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/11/13/%E6%99%BA%E8%83%BD%E8%BD%A6%E8%AF%86%E5%88%AB%E5%AD%A6%E4%B9%A0%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/" data-id="claevkh6z0002ycwacmi86rxv" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -159,23 +127,24 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="quick-start"><a class="markdownIt-Anchor" href="#quick-start"></a> Quick Start</h2>
+<h3 id="create-a-new-post"><a class="markdownIt-Anchor" href="#create-a-new-post"></a> Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server"><a class="markdownIt-Anchor" href="#run-server"></a> Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="generate-static-files"><a class="markdownIt-Anchor" href="#generate-static-files"></a> Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="deploy-to-remote-sites"><a class="markdownIt-Anchor" href="#deploy-to-remote-sites"></a> Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/11/12/hello-world/" data-id="claev8not00011swa36382yao" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/11/12/hello-world/" data-id="claevkh6t0000ycwa9ytyh33c" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -209,7 +178,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="笔记本win10版本转换以及激活"><a href="#笔记本win10版本转换以及激活" class="headerlink" title="笔记本win10版本转换以及激活"></a>笔记本win10版本转换以及激活</h1><p>本篇文章介绍笔记本win10版本转换以及激活方法</p>
+        <h1 id="笔记本win10版本转换以及激活"><a class="markdownIt-Anchor" href="#笔记本win10版本转换以及激活"></a> 笔记本win10版本转换以及激活</h1>
+<p>本篇文章介绍笔记本win10版本转换以及激活方法</p>
         
           <p class="article-more-link">
             <a href="/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/#more">Read More</a>
@@ -218,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/" data-id="claev8nop00001swa20xxhwr7" data-title="win10版本转换激活" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/" data-id="claevkh6y0001ycwa8vp15zjh" data-title="win10版本转换激活" class="article-share-link">Share</a>
       
       
       
