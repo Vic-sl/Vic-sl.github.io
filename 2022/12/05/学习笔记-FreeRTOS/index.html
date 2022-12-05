@@ -16,28 +16,24 @@
   <meta name="author" content="Victor">
   <meta name="keywords" content="">
   
-    <meta name="description" content="[TOC] Python学习路线指南   从进入高中以来便开始接触编程世界，先后学习了C语言、Python以及正在学的C++与rust，由于自学没有规划学习路线，走过不少弯路，现编写此文分享经验。本文只代表个人经验之谈，请结合自我实际情况合理规划路线。">
+    <meta name="description" content="[TOC] 学习笔记（FreeRTOS） 学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习路线指南">
-<meta property="og:url" content="http://example.com/2022/11/15/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/index.html">
+<meta property="og:title" content="学习笔记-(FreeRTOS)">
+<meta property="og:url" content="http://example.com/2022/12/05/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-FreeRTOS/index.html">
 <meta property="og:site_name" content="Victor">
-<meta property="og:description" content="[TOC] Python学习路线指南   从进入高中以来便开始接触编程世界，先后学习了C语言、Python以及正在学的C++与rust，由于自学没有规划学习路线，走过不少弯路，现编写此文分享经验。本文只代表个人经验之谈，请结合自我实际情况合理规划路线。">
+<meta property="og:description" content="[TOC] 学习笔记（FreeRTOS） 学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/mdimg/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.png">
-<meta property="og:image" content="http://example.com/img/mdimg/python%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9.png">
-<meta property="og:image" content="http://example.com/img/mdimg/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93.png">
-<meta property="og:image" content="http://example.com/img/mdimg/%E8%B5%84%E6%BA%90.png">
-<meta property="article:published_time" content="2022-11-15T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-05T07:41:47.389Z">
+<meta property="article:published_time" content="2022-12-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-05T07:43:30.119Z">
 <meta property="article:author" content="Victor">
-<meta property="article:tag" content="Python">
 <meta property="article:tag" content="学习">
+<meta property="article:tag" content="FreeRTOS">
+<meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/mdimg/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.png">
   
   
   
-  <title>Python学习路线指南 - Victor</title>
+  <title>学习笔记-(FreeRTOS) - Victor</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,13 +192,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/mdimg/wallhaven-dgdjml.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/mdimg/freeRTOSbk.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Python学习路线指南"></span>
+            <span id="subtitle" data-typed-text="学习笔记-(FreeRTOS)"></span>
           
         </div>
 
@@ -213,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-15 08:00" pubdate>
-          2022年11月15日 早上
+        <time datetime="2022-12-05 08:00" pubdate>
+          2022年12月5日 早上
         </time>
       </span>
     
@@ -225,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          558 字
         
       </span>
     
@@ -236,7 +232,7 @@
         
         
         
-          16 分钟
+          5 分钟
         
       </span>
     
@@ -274,60 +270,37 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Python学习路线指南</h1>
+            <h1 style="display: none">学习笔记-(FreeRTOS)</h1>
             
             
               <div class="markdown-body">
                 
                 <p>[TOC]</p>
-<h2 id="Python学习路线指南">Python学习路线指南</h2>
-<p>  从进入高中以来便开始接触编程世界，先后学习了C语言、Python以及正在学的C++与rust，由于自学没有规划学习路线，走过不少弯路，现编写此文分享经验。本文只代表个人经验之谈，请结合自我实际情况合理规划路线。</p>
+<h1>学习笔记（FreeRTOS）</h1>
+<p>学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。</p>
 <span id="more"></span>
-<p>本文思维导图</p>
-<p><img src="/img/mdimg/%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>Python学习内容</p>
-<p><img src="/img/mdimg/python%E5%AD%A6%E4%B9%A0%E5%86%85%E5%AE%B9.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<h3 id="Python基础学习">Python基础学习</h3>
-<p>  Python被誉为最易入门编程语言之一，其语法也是比较简单易学的，对于学习Python我的建议是选择一本经典书籍快速学习，基础入门不需要深入理解，只需学会使用，在学习基础语法时一定要在自己电脑上编写程序，一开始编写不需要注重代码行数与复杂度，后续第三部分会补充该问题。</p>
-<p>  对于学习所选经典书籍推荐<a target="_blank" rel="noopener" href="https://www.code-nav.cn/rd/?rid=cbddf0af6064484f002658102cdbba17">《Python编程：从入门到实践》</a>，这里提供电子版，但建议购买一本实体书籍方便学习，也可以作为后续使用充当字典查询使用。还有一些其他书籍资源，笔者将其放在第四部分。</p>
-<p>  Python基础包括变量、运算符和表达式、流程控制、基础数据结构、函数、面向对象编程、模块、包、异常处理以及文件操作，其中面向对象编程是Python的核心之一，模块化编程与包方便以后大型项目管理，文件操作可以在实际生活中更方便以及更快的解决问题，成为同学眼中的会魔法的人。</p>
-<h3 id="Python进阶学习">Python进阶学习</h3>
-<p>  对于Python进阶内容，是对函数进行进阶学习，以及学习正则表达式和并发编程，其中，函数进阶包括</p>
-<blockquote>
-<p>闭包</p>
-</blockquote>
-<blockquote>
-<p>匿名函数</p>
-</blockquote>
-<blockquote>
-<p>生成器</p>
-</blockquote>
-<blockquote>
-<p>函数装饰器</p>
-</blockquote>
-<blockquote>
-<p>高阶函数</p>
-</blockquote>
-<p>  进一步学习函数会使你的代码更加简洁与规范，摆脱编写稚嫩的代码风格。</p>
-<p>“这个问题怎么解决？”</p>
-<p>“我知道，用正则表达式可以解决。”</p>
-<p>那么你现在有两个问题需要解决了。</p>
-<p>  上述是正则表达式里面一句比较经典的对话，表达了正则表达式的学习难度，正则表达式由于其规则较多且为复杂，要熟练使用只能在编程过程中经常使用查阅，通常的Python书籍都会有一章内容包含正则表达式， 其中会有正则表达的规则表，经常使用即可。</p>
-<p>  并发编程是使用编程充分调用计算机硬件以及计算机网络的高级编程方法，并发编程顾名思义，并行着发生的编程方法，基础编程程序通常只能自上至下的单线程运行，并发编程则可以在需要的时候让不互相影响的两项或多项任务同时发生，也可以将一项较大的任务分为几部分小任务并发运行，通过增加计算机使用资源节约完成任务时间。并发编程能够高效完成任务但也带来了相对应的困难，比如并发编程如何控制各个并行任务的运行时间，如何合理的将大任务分割为能运行的小任务，这只能在实际编程中积累编程经验，没有捷径可走。</p>
-<h3 id="编程进阶必备知识">编程进阶必备知识</h3>
-<p>  当掌握Python基础以及进阶使用后，你可能开始接触到使用编程解决现实问题，比如蓝桥杯比赛以及ACM编程大赛等，这里举蓝桥杯的例子是因为这是笔者进入大学在大一参加的第一个比赛，它开启了笔者的大学比赛经历，在参加蓝桥杯比赛只取得省二后便暴露出笔者野路子出家的缺陷，不懂数据结构，不会使用算法，仅凭单单的简单编程经验不能在比赛中走得更远。</p>
-<p>  想要编程能力更近一步，就要理解一个公式<code>程序 = 数据结构 + 算法</code>，它代表了好代码的结构，将实际问题中的数据转换为编程语言中的对应的数据结构，处理这些数据就是使用合适的算法，两者结合解决实际问题才符合科学的编程。</p>
-<p>  学习数据结构推荐浙大陈越老师的数据结构课程，比较经典但是需要集中精力理解所讲内容，在mooc上可以找到本课程。书籍推荐《大话数据结构》。</p>
-<p>  学习算法建议先将《图解算法》学习后，购买《算法导论》学习，前者漫画风格能够很好的培养学习枯燥的算法的兴趣，后者作为计算机经典书籍之一，称为”算法圣经“。在啃这两本书籍时要多写代码，算法要理解并知道其作用与运行结果，空想需要很强大的想象能力。</p>
-<p>  当你成为一个掌握算法与程序结构的大牛后，学习其他编程语言也非常容易，你已经具备属于自己的编程思想，学习其他语言相当于学习它的语法与核心内容，相信你也有了自己的理解。</p>
-<p>  编写代码对个人来说或许容易，但大型项目往往由团队共同完成，因此，编写易读的代码也成为了一种能力，笔者在此推荐<a target="_blank" rel="noopener" href="https://google.github.io/styleguide/pyguide.html">谷歌的Python代码规范</a>，在开始学习编程时就要养成编写易读的代码，谷歌作为龙头企业，其代码规范值得学习。</p>
-<p>于此，你已经看到本文的结尾，Python学习也快靠一段落，欢迎大家与笔者交流学习，作为个人，经验会有不足之处，在学习编程的同时也学习了三维建模软件的使用、单片机以及现代文学，期待和大家进行知识火花的碰撞。</p>
-<p>下面是笔者的收集的部分资源，将其做成导图方便大家查看。</p>
-<h3 id="资源">资源</h3>
-<p>Python常用类库</p>
-<p><img src="/img/mdimg/%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%BA%93.png" srcset="/img/loading.gif" lazyload alt=""></p>
-<p>资源</p>
-<p><img src="/img/mdimg/%E8%B5%84%E6%BA%90.png" srcset="/img/loading.gif" lazyload alt=""></p>
+<h2 id="Day1">Day1</h2>
+<h3 id="Task-任务">Task(任务)</h3>
+<ol>
+<li class="lvl-3">
+<p>任务的创建，在app_main()中使用</p>
+<p><code>xTaskCreate(任务函数名字, 任务名字, 使用栈的大小, 传入参数, 任务优先级, 任务地址)</code></p>
+<p>创建任务。其中任务地址为<code>TaskHandle_t</code>类型。</p>
+</li>
+<li class="lvl-3">
+<p>任务的结束，在任务函数中使用<code>vTaskDelete(NULL)</code>结束任务，在app_main()中使用<code>vTakeDelete(任务地址)</code>结束任务。</p>
+</li>
+<li class="lvl-3">
+<p>同一优先级的任务按照先创建先运行的原则进行，不同优先级则为优先级大先运行，esp-idf默认最大优先级为24，可在<code>esp-idf\components\freertos\esp_additions\include\freertos\FreeRTOSConfig.h</code>文件中修改<code>configMAX_PRIORITIES</code>的设定值改变其最大优先级。</p>
+</li>
+<li class="lvl-3">
+<p>获取任务优先级，使用<code>uxTaskPriorityGet(任务地址)</code>获得任务优先级，定义一个<code>UBaseType_t</code>类型变量来存储任务的优先级，其本质是<code>unsigned int</code>类型。</p>
+</li>
+<li class="lvl-3">
+<p>修改任务优先级，使用<code>vTaskPrioritySet(任务地址, 修改的任务优先级)</code>修改任务优先级。</p>
+</li>
+</ol>
+<p>2020-12-05</p>
 
                 
               </div>
@@ -346,7 +319,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
 
@@ -361,9 +334,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Python/">#Python</a>
-      
         <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
+      
+        <a href="/tags/FreeRTOS/">#FreeRTOS</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
       
     </div>
   
@@ -377,18 +352,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/05/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-FreeRTOS/" title="学习笔记-(FreeRTOS)">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">学习笔记-(FreeRTOS)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/" title="十七届智能车视觉组问题收录">
-                        <span class="hidden-mobile">十七届智能车视觉组问题收录</span>
+                      <a href="/2022/11/15/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" title="Python学习路线指南">
+                        <span class="hidden-mobile">Python学习路线指南</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
