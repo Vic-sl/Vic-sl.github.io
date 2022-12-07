@@ -16,15 +16,15 @@
   <meta name="author" content="Victor">
   <meta name="keywords" content="">
   
-    <meta name="description" content="[TOC] 学习笔记（FreeRTOS） 学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。">
+    <meta name="description" content="[TOC] 学习笔记（基于ESP32的FreeRTOS） 基于ESP32的FreeRTOS，参考ESP32官方的ESP-IDF开发，目的为使用FreeRTOS管理任务，实现FOC算法控制，本文为学习FreeRTOS所记录笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习笔记-(FreeRTOS)">
 <meta property="og:url" content="http://example.com/2022/12/05/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-FreeRTOS/index.html">
 <meta property="og:site_name" content="Victor">
-<meta property="og:description" content="[TOC] 学习笔记（FreeRTOS） 学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。">
+<meta property="og:description" content="[TOC] 学习笔记（基于ESP32的FreeRTOS） 基于ESP32的FreeRTOS，参考ESP32官方的ESP-IDF开发，目的为使用FreeRTOS管理任务，实现FOC算法控制，本文为学习FreeRTOS所记录笔记。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-12-05T00:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-05T08:59:34.304Z">
+<meta property="article:modified_time" content="2022-12-07T13:34:32.080Z">
 <meta property="article:author" content="Victor">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="FreeRTOS">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          862 字
+          1.5k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          8 分钟
+          13 分钟
         
       </span>
     
@@ -276,40 +276,73 @@
               <div class="markdown-body">
                 
                 <p>[TOC]</p>
-<h1>学习笔记（FreeRTOS）</h1>
-<p>学习使用FOC控制，使用FreeRTOS管理任务，本文为学习FreeRTOS所记录笔记。</p>
+<h1>学习笔记（基于ESP32的FreeRTOS）</h1>
+<p>基于ESP32的FreeRTOS，参考ESP32官方的ESP-IDF开发，目的为使用FreeRTOS管理任务，实现FOC算法控制，本文为学习FreeRTOS所记录笔记。</p>
 <span id="more"></span>
 <h2 id="Day1-2022-12-05">Day1 (2022-12-05)</h2>
 <h3 id="Task-任务">Task(任务)</h3>
 <ol>
 <li class="lvl-3">
-<p>任务的创建，在app_main()中使用</p>
-<p><code>xTaskCreate(任务函数名字, 任务名字, 使用栈的大小, 传入参数, 任务优先级, 任务地址)</code></p>
-<p>创建任务。其中任务地址为<code>TaskHandle_t</code>类型。</p>
+<h4 id="任务的创建">任务的创建</h4>
+<p>在app_main()中使用<code>xTaskCreate(任务函数名字, 任务名字, 堆栈的大小, 传入参数, 任务优先级, 任务句柄)</code>创建任务。其中任务句柄为<code>TaskHandle_t</code>类型。</p>
 </li>
 <li class="lvl-3">
-<p>任务的结束，在任务函数中使用<code>vTaskDelete(NULL)</code>结束任务，在app_main()中使用<code>vTakeDelete(任务地址)</code>结束任务。</p>
+<h4 id="任务的结束">任务的结束</h4>
+<p>在任务函数中使用<code>vTaskDelete(NULL)</code>结束任务，在app_main()中使用<code>vTakeDelete(任务句柄)</code>结束任务。</p>
 </li>
 <li class="lvl-3">
-<p>同一优先级的任务按照先创建先运行的原则进行，不同优先级则为优先级大先运行，esp-idf默认最大优先级为24，可在<code>esp-idf\components\freertos\esp_additions\include\freertos\FreeRTOSConfig.h</code>文件中修改<code>configMAX_PRIORITIES</code>的设定值改变其最大优先级。</p>
+<h4 id="任务优先级">任务优先级</h4>
+<ol>
+<li class="lvl-6">
+<p>同一优先级的任务按照先创建先运行的原则进行，不同优先级则为优先级大先运行，esp-idf默认最大优先级为24，可在</p>
+<p><code>esp-idf\components\freertos\esp_additions\include\freertos\FreeRTOSConfig.h</code>文件中修改<code>configMAX_PRIORITIES</code>的设定值改变其最大优先级。</p>
+</li>
+<li class="lvl-6">
+<p>获取任务优先级，使用<code>uxTaskPriorityGet(任务句柄)</code>获得任务优先级，定义一个<code>UBaseType_t</code>类型变量来存储任务的优先级，其本质是<code>unsigned int</code>类型。</p>
+</li>
+<li class="lvl-6">
+<p>修改任务优先级，使用<code>vTaskPrioritySet(任务句柄, 修改的任务优先级)</code>修改任务优先级。</p>
+</li>
+</ol>
 </li>
 <li class="lvl-3">
-<p>获取任务优先级，使用<code>uxTaskPriorityGet(任务地址)</code>获得任务优先级，定义一个<code>UBaseType_t</code>类型变量来存储任务的优先级，其本质是<code>unsigned int</code>类型。</p>
+<h4 id="任务的挂起（暂停）">任务的挂起（暂停）</h4>
+<p>使用<code>vTaskSuspend(NULL)</code>在任务函数中挂起自己，使用<code>vTaskSuspend(任务句柄)</code>挂起指定任务。</p>
 </li>
 <li class="lvl-3">
-<p>修改任务优先级，使用<code>vTaskPrioritySet(任务地址, 修改的任务优先级)</code>修改任务优先级。</p>
+<h4 id="任务的恢复">任务的恢复</h4>
+<ol>
+<li class="lvl-6">使用<code>vTaskResume(任务句柄)</code>恢复任务，使任务继续执行。</li>
+<li class="lvl-6">在任务函数中使用<code>vTaskSuspendAll()</code>会使CPU只执行任务函数中的后续代码，其他任务将会被挂起，在使用<code>vTaskResumeAll()</code>后，其他任务才能继续执行。但是，在使用<code>vTaskSuspendAll()</code>时中断仍处于启用状态。</li>
+</ol>
 </li>
 <li class="lvl-3">
-<p>任务的挂起（暂停），使用<code>vTaskSuspend(NULL)</code>在任务函数中挂起自己，使用<code>vTaskSuspend(任务句柄)</code>挂起指定任务。</p>
+<h4 id="获取任务信息">获取任务信息</h4>
+<p>使用<code>vTaskList()</code>打印系统任务信息，包括任务名字、运行状态、任务优先级、使用堆栈大小、任务编号。需定义一个<code>static char</code>类型变量存储任务信息。但在单片机寸金寸土的内存里面，使用<code>vTaskLinst()</code>会占用很大的内存，一般不使用这个函数获取任务信息。</p>
+<p>取而代之在FreeRTOS中常用查看任务所用栈的函数为<code>uTaskGetStackHighWaterMark()</code>，用于获取任务剩余栈的程度。在FreeRTOS中每个任务维护自己的堆栈，总堆栈大小在创建任务时指定。该函数所返回类型为<code>UBaseType_t</code>。</p>
 </li>
+</ol>
+<h2 id="Day2-2022-12-07">Day2 (2022-12-07)</h2>
+<h3 id="Task-任务-2">Task(任务)</h3>
+<ol>
 <li class="lvl-3">
-<p>任务的恢复，使用<code>vTaskResume(任务句柄)</code>恢复任务，使任务继续执行。</p>
+<h4 id="Watchdogs-看门狗">Watchdogs(看门狗)</h4>
+<p>ESP-IDF支持两种看门狗计时器，中断看门狗计时器(Interrupt Watchdog Timer (IWDT))与任务看门狗计时器(Task Watchdog Timer (TWDT))，中断看门狗在后面学习中断时使用。</p>
+<p>任务看门狗的使用</p>
+<ul class="lvl-2">
+<li class="lvl-5">
+<p><code>esp_task_wdt_init()</code>初始化TWDT并且订阅<code>idle</code>任务。</p>
 </li>
-<li class="lvl-3">
-<p>在任务函数中使用<code>vTaskSuspendAll()</code>会使CPU只执行任务函数中的后续代码，其他任务将会被挂起，在使用<code>vTaskResumeAll()</code>后，其他任务才能继续执行。但是，在使用<code>vTaskSuspendAll()</code>时中断仍处于启用状态。</p>
+<li class="lvl-5">
+<p><code>esp_task_wdt_add(TaskHandle_t task_handle)</code>给任务添加看门狗。</p>
 </li>
-<li class="lvl-3">
-<p>使用<code>vTaskList</code>打印系统任务信息，包括任务名字、运行状态、任务优先级、使用堆栈大小、任务编号。需定义一个<code>static char</code>类型变量存储任务信息。</p>
+<li class="lvl-5">
+<p><code>esp_task_wdt_reset()</code>‘喂狗’，在给任务添加看门狗后一段时间要调用该函数’feed TWDT’，否则看门狗会报错，‘一段时间’在ESP-IDF的配置文件中设置。</p>
+</li>
+<li class="lvl-5">
+<p><code>esp_task_wdt_delete(TaskHandle_t task_handle)</code>删除任务的看门狗。</p>
+</li>
+</ul>
 </li>
 </ol>
 
