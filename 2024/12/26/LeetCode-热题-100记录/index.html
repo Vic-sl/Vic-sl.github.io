@@ -16,22 +16,25 @@
   <meta name="author" content="Victor">
   <meta name="keywords" content="">
   
-    <meta name="description" content="十七届智能车视觉组问题收录 第一次参加智能车比赛，在做部分机器视觉与结构建模方面的工作时，遇到了许多问题，编写此篇文章记录。">
+    <meta name="description" content="1. 两数之和 **题目：**给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。 你可以按任意顺序返回答案。 **我的题解：**将给定数组设置为一个哈希表，其中数字为关键字，对应在数组中的下标为键值。使用C语言的哈希库–uthash，来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="十七届智能车视觉组问题收录">
-<meta property="og:url" content="http://example.com/2022/11/13/%E5%8D%81%E4%B8%83%E5%B1%8A%E6%99%BA%E8%83%BD%E8%BD%A6%E8%A7%86%E8%A7%89%E7%BB%84%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/index.html">
+<meta property="og:title" content="LeetCode 热题 100记录">
+<meta property="og:url" content="http://example.com/2024/12/26/LeetCode-%E7%83%AD%E9%A2%98-100%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Victor">
-<meta property="og:description" content="十七届智能车视觉组问题收录 第一次参加智能车比赛，在做部分机器视觉与结构建模方面的工作时，遇到了许多问题，编写此篇文章记录。">
+<meta property="og:description" content="1. 两数之和 **题目：**给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。 你可以按任意顺序返回答案。 **我的题解：**将给定数组设置为一个哈希表，其中数字为关键字，对应在数组中的下标为键值。使用C语言的哈希库–uthash，来">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-13T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-26T14:23:10.927Z">
+<meta property="article:published_time" content="2024-12-26T14:04:23.000Z">
+<meta property="article:modified_time" content="2024-12-26T14:22:48.995Z">
 <meta property="article:author" content="Victor">
-<meta property="article:tag" content="智能车比赛">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="力扣">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>十七届智能车视觉组问题收录 - Victor</title>
+  <title>LeetCode 热题 100记录 - Victor</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -190,13 +193,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/mdimg/wallhaven-o3g38p.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/mdimg/LeetCode.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="十七届智能车视觉组问题收录"></span>
+            <span id="subtitle" data-typed-text="LeetCode 热题 100记录"></span>
           
         </div>
 
@@ -207,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-13 08:00" pubdate>
-          2022年11月13日 早上
+        <time datetime="2024-12-26 22:04" pubdate>
+          2024年12月26日 晚上
         </time>
       </span>
     
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          459 字
+          857 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          4 分钟
+          8 分钟
         
       </span>
     
@@ -268,7 +271,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">十七届智能车视觉组问题收录</h1>
+            <h1 style="display: none">LeetCode 热题 100记录</h1>
             
               <p class="note note-info">
                 
@@ -281,30 +284,20 @@
             
               <div class="markdown-body">
                 
-                <h3 id="十七届智能车视觉组问题收录">十七届智能车视觉组问题收录</h3>
-<p>第一次参加智能车比赛，在做部分机器视觉与结构建模方面的工作时，遇到了许多问题，编写此篇文章记录。</p>
-<span id="more"></span>
-<ol>
-<li class="lvl-3">
-<p>问题一</p>
-<p>在按照基础教程配置过程中，遇到了一系列问题，主要是CUDA显卡驱动方面问题</p>
-<div class="code-wrapper"><pre><code class="hljs python">问题： keras-nightly 导入包报错 cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimizers&#x27;</span></code></pre></div>
-<p>报错信息</p>
-<div class="code-wrapper"><pre><code class="hljs python"><span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam
-ImportError: cannot <span class="hljs-keyword">import</span> name <span class="hljs-string">&#x27;Adam&#x27;</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;keras.optimozers&#x27;</span></code></pre></div>
-<p>解决方案</p>
-<p>将错误使用代码修改：</p>
-   <div class="code-wrapper"><pre><code class="hljs python">错误代码：
-<span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> Adam
-opt = Adam(lr=lr, decay=lr/epochs)
-修改为：
-<span class="hljs-keyword">from</span> keras.optimizers <span class="hljs-keyword">import</span> adam_v2
-opt = adam_v2.Adam(lr=lr, decay=lr/epochs)</code></pre></div>
-</li>
-<li class="lvl-3">
-<p>问题二：待更新</p>
-</li>
-</ol>
+                <h3 id="1-两数之和">1. 两数之和</h3>
+<p>**题目：**给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p>**我的题解：**将给定数组设置为一个哈希表，其中数字为关键字，对应在数组中的下标为键值。使用C语言的哈希库–<code>uthash</code>，来实现哈希表的创建以及对应操作。在处理函数中，遍历数组元素，在哈希表中查找<code>target - nums[i]</code>，如果不在，则将数组元素添加进哈希表。</p>
+<p>**不足之处：**待处理数组如果太大可能导致哈希表过大，造成内存溢出问题。</p>
+<p>**优秀题解：**使用结构体保存数字和对应下标，将数字排序后，设定两个指针，一个指向第一个元素，一个指向最后一个元素，头指针向后移动，移动条件为头指针值小于<code>target - 尾指针此时指向的值</code>，如果不小于则尾指针向前移动，移动条件为头指针值大于<code>target - 尾指针此时指向的值</code>。该题解避免了使用哈希表的额外内存开销和寻找所需时间。</p>
+<h3 id="49-字母异位词分组">49. 字母异位词分组</h3>
+<p>**题目：**给你一个字符串数组，请你将 <strong>字母异位词</strong> 组合在一起。可以按任意顺序返回结果列表。</p>
+<p><strong>字母异位词</strong> 是由重新排列源单词的所有字母得到的一个新单词。</p>
+<p>**我的题解：**设定一个哈希表，其中字符串作为关键字，还包含字母相同字符串的下标数组，返回数组长度，该字母相同字符串个数。遍历字符串数组，将字符串进行排序，对排序后的字符串进行判断，在哈希表中则将下标记录进对应相同字母位置的下标数组中，不在则将排序后的字符串添加进哈希表中，并将返回数组长度加一。也就是将所有字符串进行排序，字母异位词排序后是相等的，当排序后的字符串不在哈希表中时，意味着这是一个新的字母异位词，需要将返回列表长度加一，同时将该字母组合下的数量加一。</p>
+<h3 id="128-最长连续序列">128. 最长连续序列</h3>
+<p>给定一个未排序的整数数组 <code>nums</code> ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。</p>
+<p>请你设计并实现时间复杂度为 <code>O(n)</code> 的算法解决此问题。</p>
 
                 
               </div>
@@ -323,7 +316,7 @@ opt = adam_v2.Adam(lr=lr, decay=lr/epochs)</code></pre></div>
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%99%BA%E8%83%BD%E8%BD%A6/" class="category-chain-item">智能车</a>
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
 
@@ -338,7 +331,13 @@ opt = adam_v2.Adam(lr=lr, decay=lr/epochs)</code></pre></div>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%99%BA%E8%83%BD%E8%BD%A6%E6%AF%94%E8%B5%9B/">#智能车比赛</a>
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/tags/%E5%8A%9B%E6%89%A3/">#力扣</a>
+      
+        <a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>
       
     </div>
   
@@ -352,18 +351,12 @@ opt = adam_v2.Adam(lr=lr, decay=lr/epochs)</code></pre></div>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/15/Python%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/" title="Python学习路线指南">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Python学习路线指南</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/22/win10%E7%89%88%E6%9C%AC%E8%BD%AC%E6%8D%A2%E6%BF%80%E6%B4%BB/" title="win10版本转换激活">
-                        <span class="hidden-mobile">win10版本转换激活</span>
+                      <a href="/2022/12/05/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-FreeRTOS/" title="学习笔记-(FreeRTOS)">
+                        <span class="hidden-mobile">学习笔记-(FreeRTOS)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
