@@ -24,7 +24,7 @@
 <meta property="og:description" content="1. 两数之和 题目： 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。 你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。 你可以按任意顺序返回答案。 我的题解： 将给定数组设置为一个哈希表，其中数字为关键字，对应在数组中的下标为键值。使用C语言的哈希库–uthash，来实现哈希表的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-26T14:04:23.000Z">
-<meta property="article:modified_time" content="2024-12-28T14:24:23.000Z">
+<meta property="article:modified_time" content="2024-12-29T13:57:23.000Z">
 <meta property="article:author" content="Victor">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="笔记">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          1.7k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          14 分钟
         
       </span>
     
@@ -276,7 +276,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年12月28日 晚上
+                    本文最后更新于：2024年12月29日 晚上
                   
                 
               </p>
@@ -310,6 +310,10 @@
 <p>找出其中的两条线，使得它们与 <code>x</code> 轴共同构成的容器可以容纳最多的水。</p>
 <p>返回容器可以储存的最大水量。</p>
 <p><strong>我的题解：</strong> 使用双指针，分别从头尾往中间遍历，条件为相互比较，较小的移动，每次移动后计算容器水量。</p>
+<h3 id="15-三数之和">15. 三数之和</h3>
+<p>给你一个整数数组 <code>nums</code> ，判断是否存在三元组 <code>[nums[i], nums[j], nums[k]]</code> 满足 <code>i != j</code>、<code>i != k</code> 且 <code>j != k</code> ，同时还满足 <code>nums[i] + nums[j] + nums[k] == 0</code> 。请你返回所有和为 <code>0</code> 且不重复的三元组。</p>
+<p>**注意：**答案中不可以包含重复的三元组。</p>
+<p><strong>我的题解：</strong> 将数组排序后，循环遍历数组，设定两个指针，一个指向<code>i + 1</code>，另一个指向数组尾部。判断三数之和与<code>0</code>的关系，大于则移动<code>right</code>，小于则移动<code>left</code>，等于则添加进返回数组中。注意对三元数组的去重，解决<code>a</code>的去重方法为判断<code>nums[i] ? nums[i-1]</code>，<code>b</code>和<code>c</code>的去重需在添加数组后执行，为避免没有添加到返回数组中就开始去重了。<code>b</code>和<code>c</code>去重是和下一个进行比较，<code>a</code>的去重是和前一个进行比较。</p>
 
                 
               </div>
