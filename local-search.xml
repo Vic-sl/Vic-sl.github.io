@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>hexot提交失败问题记录</title>
+    <link href="/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<p>本文记录了一次<code>hexo</code>提交博客报错<code>ssh: connect to host github.com port 22:Connection timed out fatal: Could not read from remote repository.</code>的解决方法。</p><span id="more"></span><h4 id="问题背景">问题背景</h4><p>在更新<code>md</code>文件后，执行<code>hexo d</code>命令迟迟不能成功提交到仓库，并报错<code>22</code>端口连接超时。</p><p>报错内容</p><div class="code-wrapper"><pre><code class="hljs pgsql">ssh: <span class="hljs-keyword">connect</span> <span class="hljs-keyword">to</span> host github.com port <span class="hljs-number">22</span>: <span class="hljs-keyword">Connection</span> timed <span class="hljs-keyword">out</span>fatal: Could <span class="hljs-keyword">not</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">from</span> remote repository.</code></pre></div><h4 id="解决方法">解决方法</h4><p>将<code>22</code>端口修改为<code>443</code>端口即可。编辑<code>~/.ssh/config</code>文件内容：</p><div class="code-wrapper"><pre><code class="hljs crmsh">Host github.com<span class="hljs-keyword">User</span> <span class="hljs-title">git</span>Hostname ssh.github.comPreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsaPort <span class="hljs-number">443</span>Host gitlab.comHostname altssh.gitlab.com<span class="hljs-keyword">User</span> <span class="hljs-title">git</span>Port <span class="hljs-number">443</span>PreferredAuthentications publickeyIdentityFile ~/.ssh/id_rsa</code></pre></div><h4 id="补充">补充</h4><p>在<code>linux</code>下修改该文件非常容易，直接执行<code>vim ~/.ssh/config</code>即可。在<code>windows</code>系统下，不易新建该文件进行编辑，使用的是<code>Git Bash</code>解决该问题。执行<code>vim config</code>后会在当前目录下生成该文件，在编辑好后复制到<code>.ssh</code>文件夹下即可。</p><h4 id="测试">测试</h4><p>测试命令为<code>ssh -T git@github.com</code>，执行后会提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>，输入<code>yes</code>即可。如果提示<code>Hi 你的github用户名! You've successfully authenticated, but GitHub does not provide shell access.</code>，就表示一切正常了。</p><h4 id="总结">总结</h4><p>国内环境提交到仓库难免会出现各种问题，故需注意报错提示，对症下药。</p><p>本文所用方案适用前提是因端口问题导致的无法推送，在使用本方案之前需执行<code>ssh -T -p 443 git@ssh.github.com</code>，不提示连接失败才能使用本方案解决。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>问题收录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>LeetCode 热题 100记录</title>
     <link href="/2024/12/26/LeetCode-%E7%83%AD%E9%A2%98-100%E8%AE%B0%E5%BD%95/"/>
     <url>/2024/12/26/LeetCode-%E7%83%AD%E9%A2%98-100%E8%AE%B0%E5%BD%95/</url>
