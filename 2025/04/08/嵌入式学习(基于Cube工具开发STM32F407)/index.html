@@ -16,23 +16,26 @@
   <meta name="author" content="Victor">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文记录了一次hexo提交博客报错ssh: connect to host github.com port 22:Connection timed out fatal: Could not read from remote repository.的解决方法。">
+    <meta name="description" content="学习笔记(基于CubeMX与CubeIDE开发STM32F407) 在学习江协的标准库开发STM32F103系列视频后，完成了一些小项目，但随着项目复杂度的不断增加，STM32F103芯片的性能参数已经不足以完成项目任务。于是在换更高性能的芯片的同时，也从标准库开发转向使用STM32CubeMX与STM32CubeIDE进行开发。本笔记是记录在学习中遇到的问题以及需要的信息。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexot提交失败问题记录">
-<meta property="og:url" content="http://example.com/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="嵌入式学习(基于Cube工具开发STM32F407)">
+<meta property="og:url" content="http://example.com/2025/04/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0(%E5%9F%BA%E4%BA%8ECube%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91STM32F407)/index.html">
 <meta property="og:site_name" content="Victor">
-<meta property="og:description" content="本文记录了一次hexo提交博客报错ssh: connect to host github.com port 22:Connection timed out fatal: Could not read from remote repository.的解决方法。">
+<meta property="og:description" content="学习笔记(基于CubeMX与CubeIDE开发STM32F407) 在学习江协的标准库开发STM32F103系列视频后，完成了一些小项目，但随着项目复杂度的不断增加，STM32F103芯片的性能参数已经不足以完成项目任务。于是在换更高性能的芯片的同时，也从标准库开发转向使用STM32CubeMX与STM32CubeIDE进行开发。本笔记是记录在学习中遇到的问题以及需要的信息。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-31T01:56:16.000Z">
-<meta property="article:modified_time" content="2024-12-31T02:31:54.994Z">
+<meta property="article:published_time" content="2025-04-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-08T15:57:42.476Z">
 <meta property="article:author" content="Victor">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="问题收录">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="FreeRTOS">
+<meta property="article:tag" content="嵌入式">
+<meta property="article:tag" content="STM32F407">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>hexot提交失败问题记录 - Victor</title>
+  <title>嵌入式学习(基于Cube工具开发STM32F407) - Victor</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexot提交失败问题记录"></span>
+            <span id="subtitle" data-typed-text="嵌入式学习(基于Cube工具开发STM32F407)"></span>
           
         </div>
 
@@ -208,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-31 09:56" pubdate>
-          2024年12月31日 上午
+        <time datetime="2025-04-08 23:00" pubdate>
+          2025年4月8日 晚上
         </time>
       </span>
     
@@ -220,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          954 字
+          474 字
         
       </span>
     
@@ -231,7 +234,7 @@
         
         
         
-          8 分钟
+          4 分钟
         
       </span>
     
@@ -269,12 +272,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">hexot提交失败问题记录</h1>
+            <h1 style="display: none">嵌入式学习(基于Cube工具开发STM32F407)</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年12月31日 上午
+                    本文最后更新于：2025年4月8日 晚上
                   
                 
               </p>
@@ -282,35 +285,27 @@
             
               <div class="markdown-body">
                 
-                <p>本文记录了一次<code>hexo</code>提交博客报错<code>ssh: connect to host github.com port 22:Connection timed out fatal: Could not read from remote repository.</code>的解决方法。</p>
+                <h1>学习笔记(基于CubeMX与CubeIDE开发STM32F407)</h1>
+<p>在学习江协的标准库开发STM32F103系列视频后，完成了一些小项目，但随着项目复杂度的不断增加，STM32F103芯片的性能参数已经不足以完成项目任务。于是在换更高性能的芯片的同时，也从标准库开发转向使用STM32CubeMX与STM32CubeIDE进行开发。本笔记是记录在学习中遇到的问题以及需要的信息。</p>
 <span id="more"></span>
-<h4 id="问题背景">问题背景</h4>
-<p>在更新<code>md</code>文件后，执行<code>hexo d</code>命令迟迟不能成功提交到仓库，并报错<code>22</code>端口连接超时。</p>
-<p>报错内容</p>
-<div class="code-wrapper"><pre><code class="hljs pgsql">ssh: <span class="hljs-keyword">connect</span> <span class="hljs-keyword">to</span> host github.com port <span class="hljs-number">22</span>: <span class="hljs-keyword">Connection</span> timed <span class="hljs-keyword">out</span>
-fatal: Could <span class="hljs-keyword">not</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">from</span> remote repository.</code></pre></div>
-<h4 id="解决方法">解决方法</h4>
-<p>将<code>22</code>端口修改为<code>443</code>端口即可。编辑<code>~/.ssh/config</code>文件内容：</p>
-<div class="code-wrapper"><pre><code class="hljs crmsh">Host github.com
-<span class="hljs-keyword">User</span> <span class="hljs-title">git</span>
-Hostname ssh.github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
-Port <span class="hljs-number">443</span>
-
-Host gitlab.com
-Hostname altssh.gitlab.com
-<span class="hljs-keyword">User</span> <span class="hljs-title">git</span>
-Port <span class="hljs-number">443</span>
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa</code></pre></div>
-<h4 id="补充">补充</h4>
-<p>在<code>linux</code>下修改该文件非常容易，直接执行<code>vim ~/.ssh/config</code>即可。在<code>windows</code>系统下，不易新建该文件进行编辑，使用的是<code>Git Bash</code>解决该问题。执行<code>vim config</code>后会在当前目录下生成该文件，在编辑好后复制到<code>.ssh</code>文件夹下即可。</p>
-<h4 id="测试">测试</h4>
-<p>测试命令为<code>ssh -T git@github.com</code>，执行后会提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>，输入<code>yes</code>即可。如果提示<code>Hi 你的github用户名! You've successfully authenticated, but GitHub does not provide shell access.</code>，就表示一切正常了。</p>
-<h4 id="总结">总结</h4>
-<p>国内环境提交到仓库难免会出现各种问题，故需注意报错提示，对症下药。</p>
-<p>本文所用方案适用前提是因端口问题导致的无法推送，在使用本方案之前需执行<code>ssh -T -p 443 git@ssh.github.com</code>，不提示连接失败才能使用本方案解决。</p>
+<h2 id="Day1-2025-04-08">Day1(2025-04-08)</h2>
+<h3 id="今日问题">今日问题</h3>
+<h4 id="问题1：CubeMX无法创建新项目。">问题1：CubeMX无法创建新项目。</h4>
+<p>情景：在使用CubeMX创建新项目时，提示没有相关的芯片包，使用自带的芯片包管理下载后无法解压。</p>
+<p>原因：解压需要管理员权限才能操作芯片包所下载的文件夹。</p>
+<p>解决方法：以管理员方式打开CubeMX后进行操作即可。</p>
+<h3 id="今日笔记">今日笔记</h3>
+<ol>
+<li class="lvl-3">
+<p>所购买的STM32F407VETX开发板外部高频晶振为12MHz，在配置时钟树时需注意。</p>
+</li>
+<li class="lvl-3">
+<p>SYS选择SW调试时，因开发板的两个LED与引脚PE5和PE6相连，CubeMX会有一个感叹号，暂未找到原因与解决方法，也未发现影响，直接创建项目即可。</p>
+</li>
+<li class="lvl-3">
+<p>PE5连接的LED1，PE6连接的LED2.</p>
+</li>
+</ol>
 
                 
               </div>
@@ -329,7 +324,7 @@ IdentityFile ~/.ssh/id_rsa</code></pre></div>
     
       <span class="category-chain">
         
-  <a href="/categories/hexo/" class="category-chain-item">hexo</a>
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
 
@@ -344,9 +339,15 @@ IdentityFile ~/.ssh/id_rsa</code></pre></div>
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/hexo/">#hexo</a>
+        <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>
       
-        <a href="/tags/%E9%97%AE%E9%A2%98%E6%94%B6%E5%BD%95/">#问题收录</a>
+        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/tags/FreeRTOS/">#FreeRTOS</a>
+      
+        <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">#嵌入式</a>
+      
+        <a href="/tags/STM32F407/">#STM32F407</a>
       
     </div>
   
@@ -360,18 +361,12 @@ IdentityFile ~/.ssh/id_rsa</code></pre></div>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0(%E5%9F%BA%E4%BA%8ECube%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91STM32F407)/" title="嵌入式学习(基于Cube工具开发STM32F407)">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">嵌入式学习(基于Cube工具开发STM32F407)</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/12/26/LeetCode-%E7%83%AD%E9%A2%98-100%E8%AE%B0%E5%BD%95/" title="LeetCode 热题 100记录">
-                        <span class="hidden-mobile">LeetCode 热题 100记录</span>
+                      <a href="/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="hexot提交失败问题记录">
+                        <span class="hidden-mobile">hexot提交失败问题记录</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>嵌入式学习(基于Cube工具开发STM32F407)</title>
+    <link href="/2025/04/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0(%E5%9F%BA%E4%BA%8ECube%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91STM32F407)/"/>
+    <url>/2025/04/08/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0(%E5%9F%BA%E4%BA%8ECube%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91STM32F407)/</url>
+    
+    <content type="html"><![CDATA[<h1>学习笔记(基于CubeMX与CubeIDE开发STM32F407)</h1><p>在学习江协的标准库开发STM32F103系列视频后，完成了一些小项目，但随着项目复杂度的不断增加，STM32F103芯片的性能参数已经不足以完成项目任务。于是在换更高性能的芯片的同时，也从标准库开发转向使用STM32CubeMX与STM32CubeIDE进行开发。本笔记是记录在学习中遇到的问题以及需要的信息。</p><span id="more"></span><h2 id="Day1-2025-04-08">Day1(2025-04-08)</h2><h3 id="今日问题">今日问题</h3><h4 id="问题1：CubeMX无法创建新项目。">问题1：CubeMX无法创建新项目。</h4><p>情景：在使用CubeMX创建新项目时，提示没有相关的芯片包，使用自带的芯片包管理下载后无法解压。</p><p>原因：解压需要管理员权限才能操作芯片包所下载的文件夹。</p><p>解决方法：以管理员方式打开CubeMX后进行操作即可。</p><h3 id="今日笔记">今日笔记</h3><ol><li class="lvl-3"><p>所购买的STM32F407VETX开发板外部高频晶振为12MHz，在配置时钟树时需注意。</p></li><li class="lvl-3"><p>SYS选择SW调试时，因开发板的两个LED与引脚PE5和PE6相连，CubeMX会有一个感叹号，暂未找到原因与解决方法，也未发现影响，直接创建项目即可。</p></li><li class="lvl-3"><p>PE5连接的LED1，PE6连接的LED2.</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>笔记</tag>
+      
+      <tag>FreeRTOS</tag>
+      
+      <tag>嵌入式</tag>
+      
+      <tag>STM32F407</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexot提交失败问题记录</title>
     <link href="/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <url>/2024/12/31/hexot%E6%8F%90%E4%BA%A4%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
